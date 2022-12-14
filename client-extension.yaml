@@ -1,0 +1,14 @@
+runtime:
+  type: service
+  template: service-springboot
+  cpu: 500m
+  memory: 256Mi
+
+whatsapp-user-agent:
+  type: oauthApplicationUserAgent
+  scopes:
+    - Liferay.Headless.Commerce.Admin.Order.everything.read
+
+assemble:
+  - include:
+    - "*.client-extension-config.json"
